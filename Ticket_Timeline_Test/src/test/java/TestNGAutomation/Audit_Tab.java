@@ -59,27 +59,29 @@ public class Audit_Tab extends Test_Files {
 		driver.findElement(By.xpath("//span[contains(text(),'Remedy')]")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.id("no-ticket-associate-select")).sendKeys("ST091528");
-		Thread.sleep(5000);
-		driver.findElement(By.id("no-ticket-associate-select")).sendKeys(Keys.ENTER);
-		Thread.sleep(2000);
-		driver.findElement(By.id("audit-without-ticket-submit")).click();
 		Thread.sleep(3000);
+		driver.findElement(By.id("no-ticket-associate-select")).sendKeys(Keys.ENTER);
+		Thread.sleep(1000);
+		driver.findElement(By.id("audit-without-ticket-submit")).click();
+		Thread.sleep(1000);
 		System.out.println("New audit ticket is created");
 		mShot.multiScreenShot(driver);
 		Thread.sleep(2000);
+
 		List<WebElement> AllCheckboxes = driver.findElements(By.xpath("//*[text()='Yes']"));
 		int size = AllCheckboxes.size();
 		System.out.println(size);
 		for (int i = 0; i < size; i++) {
+			Thread.sleep(1000);
 			AllCheckboxes.get(i).click();
 		}
 		mShot.multiScreenShot(driver);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//textarea[@id='audit-notes']")).sendKeys("test");
 		driver.findElement(By.xpath("//button[contains(text(),'Submit')]")).click();
 		mShot.multiScreenShot(driver);
 		Thread.sleep(3000);
-		
+
 	}
 
 //	@Test(priority = 2)
