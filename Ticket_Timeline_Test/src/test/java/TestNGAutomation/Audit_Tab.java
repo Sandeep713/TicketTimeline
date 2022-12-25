@@ -103,7 +103,7 @@ public class Audit_Tab extends Test_Files {
 		System.out.println(size);
 		for(int i = 0; i<size; i++) {
 		AllCheckboxes.get(i).click();
-		System.out.println("Selected the chec kbox");
+		System.out.println("Selected the chec kb   ox");
 		
 	}
 	}
