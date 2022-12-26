@@ -67,7 +67,6 @@ public class Audit_Tab extends Test_Files {
 		System.out.println("New audit ticket is created");
 		mShot.multiScreenShot(driver);
 		Thread.sleep(2000);
-
 		List<WebElement> AllCheckboxes = driver.findElements(By.xpath("//*[text()='Yes']"));
 		int size = AllCheckboxes.size();
 		System.out.println(size);
@@ -78,46 +77,55 @@ public class Audit_Tab extends Test_Files {
 		mShot.multiScreenShot(driver);
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//textarea[@id='audit-notes']")).sendKeys("test");
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[contains(text(),'Submit')]")).click();
 		mShot.multiScreenShot(driver);
 		Thread.sleep(3000);
 
 	}
 
-//	@Test(priority = 2)
-//	public void LoadAuditTicket() throws IOException, InterruptedException {
-//		System.out.println("Entering the min date ");
-//		driver.findElement(By.id("audit-date-min")).sendKeys(Keys.chord(Keys.CONTROL, "a"), "10/01/2022");
-//		System.out.println("Entering the max date ");
-//		driver.findElement(By.id("audit-date-max")).sendKeys(Keys.chord(Keys.CONTROL, "a"), "11/30/2022");
-//		System.out.println("Entering the Team Lead");
-//		driver.findElement(By.id("audit-team-lead")).sendKeys(Keys.chord(Keys.CONTROL, "a"), "Abdul Rashad");
-//		Thread.sleep(2000);
-//		driver.findElement(By.id("audit-team-lead")).sendKeys(Keys.ENTER);
-//		driver.findElement(By.id("audit-ticket-submitter-dropdown")).click();
-//		Thread.sleep(1000);
-//		driver.findElement(By.xpath("//option[contains(text(),'Associate Opened')]")).click();
-//		driver.findElement(By.xpath("//button[contains(text(),'Generate List')]")).click();
-//		System.out.println("Wait until tickets are displayed ");
-//		WebDriverWait wait = new WebDriverWait(driver, 60);
-//		wait.until(ExpectedConditions
-//				.visibilityOfElementLocated(By.xpath("//*[@id='audit-ticket-table']/tbody/tr[1]/td[1]")));
-//		Thread.sleep(6000);
-//		mShot.multiScreenShot(driver);
-//		Thread.sleep(2000);
-//		JavascriptExecutor jse = (JavascriptExecutor) driver;
-//		jse.executeScript("window.scrollBy(0,250)");
-//		Thread.sleep(2000);
-//		mShot.multiScreenShot(driver);
-//		Thread.sleep(2000);
-//
-//		List<WebElement> AllCheckboxes = driver.findElements(By.xpath("//*[text()='Yes']"));
-//		int size = AllCheckboxes.size();
-//		System.out.println(size);
-//		for (int i = 0; i < size; i++) {
-//			AllCheckboxes.get(i).click();
-//		}
-//	}
+	@Test(priority = 2)
+	public void LoadAuditTicket() throws IOException, InterruptedException {
+		System.out.println("Entering the min date ");
+		driver.findElement(By.id("audit-date-min")).sendKeys(Keys.chord(Keys.CONTROL, "a"), "10/01/2022");
+		System.out.println("Entering the max date ");
+		driver.findElement(By.id("audit-date-max")).sendKeys(Keys.chord(Keys.CONTROL, "a"), "11/30/2022");
+		System.out.println("Entering the Team Lead");
+		driver.findElement(By.id("audit-team-lead")).sendKeys(Keys.chord(Keys.CONTROL, "a"), "Abdul Rashad");
+		Thread.sleep(2000);
+		driver.findElement(By.id("audit-team-lead")).sendKeys(Keys.ENTER);
+		driver.findElement(By.id("audit-ticket-submitter-dropdown")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//option[contains(text(),'Associate Opened')]")).click();
+		driver.findElement(By.xpath("//button[contains(text(),'Generate List')]")).click();
+		System.out.println("Wait until tickets are displayed ");
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//textarea[@id='audit-notes']")));
+		Thread.sleep(6000);
+		mShot.multiScreenShot(driver);
+		Thread.sleep(2000);
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("window.scrollBy(0,250)");
+		Thread.sleep(2000);
+		mShot.multiScreenShot(driver);
+		Thread.sleep(2000);
+		List<WebElement> AllCheckboxes = driver.findElements(By.xpath("//*[text()='Yes']"));
+		int size = AllCheckboxes.size();
+		System.out.println(size);
+		for (int i = 0; i < size; i++) {
+			Thread.sleep(1000);
+			AllCheckboxes.get(i).click();
+		}
+			mShot.multiScreenShot(driver);
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("//textarea[@id='audit-notes']")).sendKeys("test");
+			Thread.sleep(2000);
+			//driver.findElement(By.xpath("//button[contains(text(),'Submit')]")).click();
+			mShot.multiScreenShot(driver);
+			//Thread.sleep(3000);
+		
+	}
 
 	/*
 	 * @Test(priority = 3) public void LoadingManagerTicket() throws IOException,
