@@ -6,7 +6,7 @@
       <class name="TestNGAutomation.Audit_Tab">
         <methods>
           <include name="basicSetup"/>
-          <include name="CreatingtheAuditTicket"/>
+          <include name="LoadAuditTicket"/>
         </methods>
       </class> <!-- TestNGAutomation.Audit_Tab -->
     </classes>

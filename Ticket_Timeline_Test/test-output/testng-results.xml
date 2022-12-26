@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[=====Browser Started=====]]>
@@ -8,29 +8,33 @@
       <![CDATA[https://ticket-timeline-cert.cerner.com/-/audits]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-12-26T00:38:13 IST" name="Default suite" finished-at="2022-12-26T00:39:57 IST" duration-ms="103618">
+  <suite started-at="2022-12-26T12:51:19 IST" name="Default suite" finished-at="2022-12-26T12:53:55 IST" duration-ms="156318">
     <groups>
     </groups>
-    <test started-at="2022-12-26T00:38:13 IST" name="Default test" finished-at="2022-12-26T00:39:57 IST" duration-ms="103618">
+    <test started-at="2022-12-26T12:51:19 IST" name="Default test" finished-at="2022-12-26T12:53:55 IST" duration-ms="156318">
       <class name="TestNGAutomation.Audit_Tab">
-        <test-method is-config="true" signature="basicSetup()[pri:0, instance:TestNGAutomation.Audit_Tab@4a7f959b]" started-at="2022-12-26T00:38:13 IST" name="basicSetup" finished-at="2022-12-26T00:38:47 IST" duration-ms="33495" status="PASS">
+        <test-method is-config="true" signature="basicSetup()[pri:0, instance:TestNGAutomation.Audit_Tab@429bffaa]" started-at="2022-12-26T12:51:19 IST" name="basicSetup" finished-at="2022-12-26T12:51:51 IST" duration-ms="32302" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=====Browser Started=====]]>
             </line>
           </reporter-output>
         </test-method> <!-- basicSetup -->
-        <test-method signature="AuditTab()[pri:0, instance:TestNGAutomation.Audit_Tab@4a7f959b]" started-at="2022-12-26T00:38:47 IST" name="AuditTab" finished-at="2022-12-26T00:39:11 IST" duration-ms="23960" status="PASS">
+        <test-method signature="AuditTab()[pri:0, instance:TestNGAutomation.Audit_Tab@429bffaa]" started-at="2022-12-26T12:51:51 IST" name="AuditTab" finished-at="2022-12-26T12:52:18 IST" duration-ms="26623" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[https://ticket-timeline-cert.cerner.com/-/audits]]>
             </line>
           </reporter-output>
         </test-method> <!-- AuditTab -->
-        <test-method signature="CreatingtheAuditTicket()[pri:1, instance:TestNGAutomation.Audit_Tab@4a7f959b]" started-at="2022-12-26T00:39:11 IST" name="CreatingtheAuditTicket" finished-at="2022-12-26T00:39:57 IST" duration-ms="46089" status="PASS">
+        <test-method signature="CreatingtheAuditTicket()[pri:1, instance:TestNGAutomation.Audit_Tab@429bffaa]" started-at="2022-12-26T12:52:18 IST" name="CreatingtheAuditTicket" finished-at="2022-12-26T12:52:53 IST" duration-ms="34585" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreatingtheAuditTicket -->
+        <test-method signature="LoadAuditTicket()[pri:2, instance:TestNGAutomation.Audit_Tab@429bffaa]" started-at="2022-12-26T12:52:53 IST" name="LoadAuditTicket" finished-at="2022-12-26T12:53:55 IST" duration-ms="62760" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoadAuditTicket -->
       </class> <!-- TestNGAutomation.Audit_Tab -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
