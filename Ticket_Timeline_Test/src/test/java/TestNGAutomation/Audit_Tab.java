@@ -98,7 +98,7 @@ public class Audit_Tab extends Test_Files {
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//option[contains(text(),'Associate Opened')]")).click();
 		driver.findElement(By.xpath("//button[contains(text(),'Generate List')]")).click();
-		System.out.println("Wait until tickets are displayed ");
+		System.out.println("Wait until tickets");
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//textarea[@id='audit-notes']")));
@@ -110,6 +110,7 @@ public class Audit_Tab extends Test_Files {
 		Thread.sleep(2000);
 		mShot.multiScreenShot(driver);
 		Thread.sleep(2000);
+		
 		List<WebElement> AllCheckboxes = driver.findElements(By.xpath("//*[text()='Yes']"));
 		int size = AllCheckboxes.size();
 		System.out.println(size);
